@@ -1,0 +1,11 @@
+[project]
+name = "cdktf-example"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+  "cdktf>=0.21.0",
+  "cdktf-cdktf-provider-random>=12.0.0",
+  "cdktf-cdktf-provider-tls>=11.0.0",
+]
