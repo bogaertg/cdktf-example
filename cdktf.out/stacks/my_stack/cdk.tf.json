@@ -1,0 +1,64 @@
+{
+  "//": {
+    "metadata": {
+      "backend": "local",
+      "stackName": "my_stack",
+      "version": "0.21.0"
+    },
+    "outputs": {
+    }
+  },
+  "provider": {
+    "random": [
+      {
+      }
+    ],
+    "tls": [
+      {
+      }
+    ]
+  },
+  "resource": {
+    "random_password": {
+      "my_password": {
+        "//": {
+          "metadata": {
+            "path": "my_stack/my_password",
+            "uniqueId": "my_password"
+          }
+        },
+        "length": 16,
+        "special": true
+      }
+    },
+    "tls_private_key": {
+      "my_key": {
+        "//": {
+          "metadata": {
+            "path": "my_stack/my_key",
+            "uniqueId": "my_key"
+          }
+        },
+        "algorithm": "RSA",
+        "rsa_bits": 2048
+      }
+    }
+  },
+  "terraform": {
+    "backend": {
+      "local": {
+        "path": "/Users/gbogaert/git/cdktf-example/terraform.my_stack.tfstate"
+      }
+    },
+    "required_providers": {
+      "random": {
+        "source": "hashicorp/random",
+        "version": "3.7.2"
+      },
+      "tls": {
+        "source": "hashicorp/tls",
+        "version": "4.1.0"
+      }
+    }
+  }
+}
